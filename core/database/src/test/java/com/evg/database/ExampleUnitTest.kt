@@ -1,4 +1,4 @@
-package com.evg.daily_planner
+package com.evg.database
 
 import org.junit.Test
 

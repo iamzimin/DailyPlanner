@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.plugin)
@@ -7,17 +7,14 @@ plugins {
 }
 
 android {
-    namespace = "com.evg.daily_planner"
+    namespace = "com.evg.todo_list"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.evg.daily_planner"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -36,20 +33,26 @@ android {
     kotlinOptions {
         jvmTarget = "21"
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
-    implementation(project(":feature:todo-list"))
 
-    //Navigation
-    implementation(libs.androidx.ui.navigation)
+    // MVI Orbit
+    implementation(libs.mvi.orbit.core)
+    implementation(libs.mvi.orbit.viewmodel)
+    implementation(libs.mvi.orbit.compose)
 
     // Dagger Hilt
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
+    implementation(libs.dagger.hilt.navigation)
+
+    // Unit test
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    debugImplementation(libs.androidx.ui.tooling)
 
 
     implementation(libs.androidx.core.ktx)
@@ -60,5 +63,4 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose.material)
 }

@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Daily_Planner"
 include(":app")
- 
+include(":feature:todo-list")
+include(":core:resource")
+include(":core:database")
