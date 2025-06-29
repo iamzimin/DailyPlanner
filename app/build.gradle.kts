@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.plugin)
     alias(libs.plugins.jetbrains.kotlin.ksp)
+    alias(libs.plugins.kotlin.serializable)
 }
 
 android {
@@ -43,9 +44,13 @@ android {
 
 dependencies {
     implementation(project(":feature:todo-list"))
+    implementation(project(":core:resource"))
 
     //Navigation
     implementation(libs.androidx.ui.navigation)
+
+    // Serialization
+    implementation(libs.kotlinx.serialization)
 
     // Dagger Hilt
     implementation(libs.dagger.hilt)
@@ -53,6 +58,7 @@ dependencies {
 
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))

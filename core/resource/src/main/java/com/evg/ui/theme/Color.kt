@@ -1,4 +1,4 @@
-package com.evg.daily_planner.ui.theme
+package com.evg.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
