@@ -10,6 +10,8 @@ import com.evg.todo_list.presentation.mvi.ToDoListViewModel
 @Composable
 fun ToDoListRoot(
     viewModel: ToDoListViewModel = hiltViewModel(),
+    onTaskCreationScreen: () -> Unit,
+    onTaskDescriptionScreen: () -> Unit,
 ) {
     /*viewModel.collectSideEffect { sideEffect ->
         when (sideEffect) {
@@ -25,5 +27,7 @@ fun ToDoListRoot(
     ToDoListScreen(
         state = viewModel.collectAsState().value,
         dispatch = viewModel::dispatch,
+        onTaskDescriptionScreen = onTaskCreationScreen,
+        onTaskCreationScreen = onTaskDescriptionScreen,
     )
 }

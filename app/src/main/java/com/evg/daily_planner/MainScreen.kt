@@ -28,10 +28,12 @@ fun MainScreen() {
         ) {
             composable<Route.ToDoList> {
                 ToDoListRoot(
-                    /*modifier = Modifier.fillMaxSize().padding(paddingValues),
-                    onScreen = {
-                        navController.navigate(route = Route.Screen)
-                    }*/
+                    onTaskCreationScreen = {
+                        navController.navigate(route = Route.TaskCreation)
+                    },
+                    onTaskDescriptionScreen = {
+                        navController.navigate(route = Route.TaskDescription)
+                    },
                 )
             }
             composable<Route.TaskDescription> {

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -8,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.evg.todo_list"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 26
@@ -30,13 +32,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
-    kotlinOptions {
-        jvmTarget = "21"
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 
 dependencies {
     implementation(project(":core:resource"))
+    implementation(project(":core:database"))
 
     // MVI Orbit
     implementation(libs.mvi.orbit.core)
@@ -47,6 +53,9 @@ dependencies {
     implementation(libs.dagger.hilt)
     ksp(libs.dagger.hilt.compiler)
     implementation(libs.dagger.hilt.navigation)
+
+    // Calendar
+    implementation(libs.compose.calendar)
 
     // Unit test
     testImplementation(libs.junit)
