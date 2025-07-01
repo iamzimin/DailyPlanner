@@ -28,7 +28,7 @@ import java.time.format.DateTimeFormatter
 @Composable
 fun HourCard(
     task: TaskGroup.Hour,
-    onTaskDescriptionScreen: () -> Unit,
+    onTaskDescriptionScreen: (Task) -> Unit,
 ) {
     val formatter = remember { DateTimeFormatter.ofPattern("HH:mm") }
 
@@ -60,7 +60,7 @@ fun HourCard(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(vertical = 2.dp)
-                            .clickable { onTaskDescriptionScreen() },
+                            .clickable { onTaskDescriptionScreen(task) },
                         colors = CardDefaults.cardColors().copy(
                             containerColor = AppTheme.colors.tileBackground,
                         )

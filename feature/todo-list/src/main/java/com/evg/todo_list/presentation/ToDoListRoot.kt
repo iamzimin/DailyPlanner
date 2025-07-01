@@ -1,7 +1,9 @@
 package com.evg.todo_list.presentation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.evg.todo_list.domain.model.Task
 import org.orbitmvi.orbit.compose.collectAsState
 import org.orbitmvi.orbit.compose.collectSideEffect
 import com.evg.todo_list.presentation.mvi.ToDoListSideEffect
@@ -10,8 +12,9 @@ import com.evg.todo_list.presentation.mvi.ToDoListViewModel
 @Composable
 fun ToDoListRoot(
     viewModel: ToDoListViewModel = hiltViewModel(),
+    modifier: Modifier,
     onTaskCreationScreen: () -> Unit,
-    onTaskDescriptionScreen: () -> Unit,
+    onTaskDescriptionScreen: (Task) -> Unit,
 ) {
     /*viewModel.collectSideEffect { sideEffect ->
         when (sideEffect) {
@@ -25,9 +28,10 @@ fun ToDoListRoot(
     }*/
 
     ToDoListScreen(
+        modifier = modifier,
         state = viewModel.collectAsState().value,
         dispatch = viewModel::dispatch,
-        onTaskDescriptionScreen = onTaskCreationScreen,
-        onTaskCreationScreen = onTaskDescriptionScreen,
+        onTaskCreationScreen = onTaskCreationScreen,
+        onTaskDescriptionScreen = onTaskDescriptionScreen,
     )
 }

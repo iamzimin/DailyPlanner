@@ -1,6 +1,5 @@
 package com.evg.todo_list.presentation
 
-import android.util.Log
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,35 +16,40 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.evg.todo_list.domain.model.Task
 import com.evg.todo_list.presentation.model.TaskGroup
 import com.evg.todo_list.presentation.mvi.ToDoListAction
 import com.evg.todo_list.presentation.mvi.ToDoListState
 import com.evg.todo_list.presentation.mvi.ToDoListViewModel
 import com.evg.ui.theme.AppTheme
 import com.evg.ui.theme.DailyPlannerTheme
+import com.evg.ui.theme.HorizontalPadding
 import com.evg.ui.theme.VerticalPadding
 import dev.alejo.compose_calendar.SimpleComposeCalendar
 
 @Composable
 fun ToDoListScreen(
+    modifier: Modifier,
     state: ToDoListState,
     dispatch: (ToDoListAction) -> Unit,
     onTaskCreationScreen: () -> Unit,
-    onTaskDescriptionScreen: () -> Unit,
+    onTaskDescriptionScreen: (Task) -> Unit,
 ) {
     var currentMonth by remember { mutableStateOf(ToDoListViewModel.CURRENT_DATE.withDayOfMonth(1)) }
     val tasksInSelectedDate = state.tasksInSelectedDate
 
     Column(
-        modifier = Modifier
-            .padding(vertical = VerticalPadding)
+        modifier = modifier
+            .padding(
+                horizontal = HorizontalPadding,
+                vertical = VerticalPadding,
+            )
     ) {
         SimpleComposeCalendar(
             modifier = Modifier.fillMaxWidth(),
             initDate = currentMonth,
             events = state.eventsInCurrentMonth,
             onDayClick = { date, dayEvents ->
-                Log.d("CalendarExample", "Выбрана дата: $date, событий: ${dayEvents.size}")
                 dispatch(ToDoListAction.SelectDate(date = date))
             },
             eventIndicator = { event, position, count ->
@@ -105,6 +109,7 @@ fun ToDoListScreen(
 private fun ToDoListScreenPreview() {
     DailyPlannerTheme {
         ToDoListScreen(
+            modifier = Modifier,
             state = ToDoListState(),
             dispatch = {},
             onTaskCreationScreen = {},

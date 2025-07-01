@@ -19,13 +19,13 @@ import com.evg.ui.theme.DailyPlannerTheme
 @Composable
 fun FullDayCard(
     task: TaskGroup.FullDay,
-    onTaskDescriptionScreen: () -> Unit,
+    onTaskDescriptionScreen: (Task) -> Unit,
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 4.dp)
-            .clickable { onTaskDescriptionScreen() },
+            .clickable { onTaskDescriptionScreen(task.task) },
         colors = CardDefaults.cardColors().copy(
             containerColor = AppTheme.colors.tileBackground,
         )

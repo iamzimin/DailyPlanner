@@ -20,6 +20,7 @@ shimmer = "1.3.0"
 serialization = "1.9.0"
 composeMaterial = "1.4.1"
 composeCalendar = "3.1.0"
+gson = "2.13.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -62,6 +63,7 @@ androidx-ui-navigation = { group = "androidx.navigation", name = "navigation-com
 
 # Serialization
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 # Calendar
 compose-calendar = { group = "com.github.jimmyplazas", name = "compose-calendar", version.ref = "composeCalendar" }
@@ -81,3 +83,4 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-serializable = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize" }
