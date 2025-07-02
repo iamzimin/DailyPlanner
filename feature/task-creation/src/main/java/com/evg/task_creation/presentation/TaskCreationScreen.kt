@@ -65,7 +65,7 @@ fun SharedTransitionScope.TaskCreationScreen(
     var dateFinishMillis by remember { mutableLongStateOf(System.currentTimeMillis() + 60 * 1000L) }
 
     val titleSpace = 8.dp
-    val fieldSpace = 16.dp
+    val fieldSpace = 18.dp
 
     Column(
         modifier = modifier
@@ -126,7 +126,6 @@ fun SharedTransitionScope.TaskCreationScreen(
                 .clip(RoundedCornerShape(BorderRadius))
                 .background(AppTheme.colors.tileBackground)
                 .fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(titleSpace),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             CustomDateTimeSelection(
