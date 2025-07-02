@@ -1,5 +1,8 @@
 package com.evg.todo_list.presentation
 
+import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -9,10 +12,12 @@ import org.orbitmvi.orbit.compose.collectSideEffect
 import com.evg.todo_list.presentation.mvi.ToDoListSideEffect
 import com.evg.todo_list.presentation.mvi.ToDoListViewModel
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun ToDoListRoot(
+fun SharedTransitionScope.ToDoListRoot(
     viewModel: ToDoListViewModel = hiltViewModel(),
     modifier: Modifier,
+    animatedVisibilityScope: AnimatedVisibilityScope,
     onTaskCreationScreen: () -> Unit,
     onTaskDescriptionScreen: (Task) -> Unit,
 ) {
@@ -29,6 +34,7 @@ fun ToDoListRoot(
 
     ToDoListScreen(
         modifier = modifier,
+        animatedVisibilityScope = animatedVisibilityScope,
         state = viewModel.collectAsState().value,
         dispatch = viewModel::dispatch,
         onTaskCreationScreen = onTaskCreationScreen,

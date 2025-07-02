@@ -3,4 +3,15 @@
 
     <string name="task_description">Task description</string>
     <string name="task_creation">Task creation</string>
+
+    <string name="task_name">Task name</string>
+    <string name="task_time">Task time</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose_time">Choose a time</string>
+    <string name="task_is_saved">The task is saved</string>
+
+    <string name="enter_task_name">Enter task name</string>
+    <string name="enter_task_description">Enter task description</string>
+    <string name="time_start_is_greater">Time start can\'t be greater than time finish</string>
 </resources>
