@@ -1,7 +1,6 @@
-package com.evg.task_description.presentation
+package com.evg.task_description.presentation.presentation
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -50,7 +49,7 @@ fun TaskDescriptionScreen(
         Text(
             text = stringResource(R.string.task_name),
             color = AppTheme.colors.text,
-            style = AppTheme.typography.body,
+            style = AppTheme.typography.heading2,
         )
         Spacer(modifier = Modifier.height(titleSpace))
 
@@ -69,7 +68,7 @@ fun TaskDescriptionScreen(
         Text(
             text = stringResource(R.string.task_description),
             color = AppTheme.colors.text,
-            style = AppTheme.typography.body,
+            style = AppTheme.typography.heading2,
         )
         Spacer(modifier = Modifier.height(titleSpace))
 
@@ -88,7 +87,7 @@ fun TaskDescriptionScreen(
         Text(
             text = stringResource(R.string.task_time),
             color = AppTheme.colors.text,
-            style = AppTheme.typography.body,
+            style = AppTheme.typography.heading2,
         )
         Spacer(modifier = Modifier.height(titleSpace))
 

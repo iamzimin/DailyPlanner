@@ -6,7 +6,6 @@ data class AppPalette(
     val primary: Color,
     val secondary: Color,
     val background: Color,
-    val shimmer: Color,
 
     val text: Color,
 
@@ -22,10 +21,9 @@ enum class AppStyle {
 }
 
 val greenDarkPalette = AppPalette(
-    primary = Color(0xFF92C47E),
-    secondary = Color(0xFF2E7D32),
+    primary = Color(0xFF7CAA68),
+    secondary = Color(0xFF2D6330),
     background = Color(0xFF102418),
-    shimmer = Color.LightGray,
 
     text = Color(0xFFFFFFFF),
 
@@ -36,10 +34,9 @@ val greenDarkPalette = AppPalette(
 )
 
 val greenLightPalette = AppPalette(
-    primary = Color(0xFF92C47E),
-    secondary = Color(0xFF2E7D32),
+    primary = Color(0xFF9CDE7F),
+    secondary = Color(0xFFBCE8AA),
     background = Color(0xFFFFFFFF),
-    shimmer = Color.Gray,
 
     text = Color(0xFF000000),
 

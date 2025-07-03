@@ -19,7 +19,7 @@ import com.evg.daily_planner.navigation.Route
 import com.evg.daily_planner.mapper.TaskDescriptionNavType
 import com.evg.daily_planner.scaffold.DailyPlannerScaffold
 import com.evg.task_creation.presentation.TaskCreationRoot
-import com.evg.task_description.presentation.TaskDescriptionRoot
+import com.evg.task_description.presentation.presentation.TaskDescriptionRoot
 import com.evg.task_description.presentation.model.TaskDescription
 import com.evg.todo_list.presentation.ToDoListRoot
 import com.evg.ui.theme.AppTheme

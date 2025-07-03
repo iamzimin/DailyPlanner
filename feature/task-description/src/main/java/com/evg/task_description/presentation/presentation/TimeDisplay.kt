@@ -1,4 +1,4 @@
-package com.evg.task_description.presentation
+package com.evg.task_description.presentation.presentation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,7 +13,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.evg.ui.extensions.clickableRipple
 import com.evg.ui.theme.AppTheme
 import com.evg.ui.theme.BorderRadius
 import com.evg.ui.theme.DailyPlannerTheme

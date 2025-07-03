@@ -14,4 +14,7 @@
     <string name="enter_task_name">Enter task name</string>
     <string name="enter_task_description">Enter task description</string>
     <string name="time_start_is_greater">Time start can\'t be greater than time finish</string>
+
+    <string name="full_day">Full day</string>
+    <string name="hourly_tasks">Hourly tasks</string>
 </resources>

@@ -84,7 +84,7 @@ fun SharedTransitionScope.TaskCreationScreen(
         Text(
             text = stringResource(R.string.task_name),
             color = AppTheme.colors.text,
-            style = AppTheme.typography.body,
+            style = AppTheme.typography.heading2,
         )
         Spacer(modifier = Modifier.height(titleSpace))
 
@@ -99,7 +99,7 @@ fun SharedTransitionScope.TaskCreationScreen(
         Text(
             text = stringResource(R.string.task_description),
             color = AppTheme.colors.text,
-            style = AppTheme.typography.body,
+            style = AppTheme.typography.heading2,
         )
         Spacer(modifier = Modifier.height(titleSpace))
 
@@ -117,7 +117,7 @@ fun SharedTransitionScope.TaskCreationScreen(
         Text(
             text = stringResource(R.string.task_time),
             color = AppTheme.colors.text,
-            style = AppTheme.typography.body,
+            style = AppTheme.typography.heading2,
         )
         Spacer(modifier = Modifier.height(titleSpace))
 
