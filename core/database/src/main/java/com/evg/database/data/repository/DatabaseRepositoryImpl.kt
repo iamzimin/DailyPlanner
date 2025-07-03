@@ -3,8 +3,6 @@ package com.evg.database.data.repository
 import com.evg.database.data.storage.TasksDatabase
 import com.evg.database.domain.model.TaskDBO
 import com.evg.database.domain.repository.DatabaseRepository
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class DatabaseRepositoryImpl(
     private val tasksDatabase: TasksDatabase,

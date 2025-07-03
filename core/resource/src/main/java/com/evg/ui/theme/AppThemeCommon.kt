@@ -9,7 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 
 object AppTheme {
-    var style by mutableStateOf(AppStyle.GREEN)
+    var style by mutableStateOf(AppStyle.BLUE)
     var nightMode: Int by mutableIntStateOf(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
     var textSize by mutableStateOf(AppSize.Medium)
 

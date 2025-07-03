@@ -1,0 +1,18 @@
+<resources>
+    <string name="task_description">Описание задачи</string>
+    <string name="task_creation">Создание задачи</string>
+
+    <string name="task_name">Название задачи</string>
+    <string name="task_time">Время задачи</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отменить</string>
+    <string name="choose_time">Выбрать время</string>
+    <string name="task_is_saved">Задача сохранена</string>
+
+    <string name="enter_task_name">Введите название задачи</string>
+    <string name="enter_task_description">Введите описание задачи</string>
+    <string name="time_start_is_greater">Время начала не может быть больше времени окончания</string>
+
+    <string name="full_day">Весь день</string>
+    <string name="hourly_tasks">Почасовые задачи</string>
+</resources>

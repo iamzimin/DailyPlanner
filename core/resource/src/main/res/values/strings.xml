@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Daily_Planner</string>
+    <string name="app_name" translatable="false">DailyPlanner</string>
 
     <string name="task_description">Task description</string>
     <string name="task_creation">Task creation</string>

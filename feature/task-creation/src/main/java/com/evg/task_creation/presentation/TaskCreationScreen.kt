@@ -8,7 +8,6 @@ import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -163,7 +162,7 @@ fun SharedTransitionScope.TaskCreationScreen(
                 .padding(ButtonPadding),
             backgroundColor = AppTheme.colors.secondary,
             icon = painterResource(R.drawable.save),
-            iconColor = AppTheme.colors.primary,
+            iconColor = AppTheme.colors.text,
             onClick = {
                 if (name.isBlank()) {
                     Toast.makeText(context, context.getString(R.string.enter_task_name), Toast.LENGTH_SHORT).show()

@@ -8,40 +8,33 @@ data class AppPalette(
     val background: Color,
 
     val text: Color,
-
-    // TextField
     val textFieldPlaceholder: Color,
-    val textFieldTitle: Color,
 
     val tileBackground: Color,
 )
 
 enum class AppStyle {
-    GREEN,
+    BLUE,
 }
 
-val greenDarkPalette = AppPalette(
-    primary = Color(0xFF7CAA68),
-    secondary = Color(0xFF2D6330),
-    background = Color(0xFF102418),
+val blueDarkPalette = AppPalette(
+    primary = Color(0xFF6A7B8C),
+    secondary = Color(0xFF3E4E5E),
+    background = Color(0xFF1A222C),
 
-    text = Color(0xFFFFFFFF),
+    text = Color(0xFFE0E0E0),
+    textFieldPlaceholder = Color(0xFF5A6A7A),
 
-    // TextField
-    textFieldPlaceholder = Color(0xFF4A7F52),
-    textFieldTitle = Color(0xFFAAAAAA),
-    tileBackground = Color(0xFF1B3D2F),
+    tileBackground = Color(0xFF2C3A48),
 )
 
-val greenLightPalette = AppPalette(
-    primary = Color(0xFF9CDE7F),
-    secondary = Color(0xFFBCE8AA),
-    background = Color(0xFFFFFFFF),
+val blueLightPalette = AppPalette(
+    primary = Color(0xFF8FA3B8),
+    secondary = Color(0xFFB0C0D0),
+    background = Color(0xFFF0F4F8),
 
-    text = Color(0xFF000000),
+    text = Color(0xFF212121),
+    textFieldPlaceholder = Color(0xFF788A9C),
 
-    // TextField
-    textFieldPlaceholder = Color(0xFF4A7F52),
-    textFieldTitle = Color(0xFF666666),
-    tileBackground = Color(0xFFE3F5E5),
+    tileBackground = Color(0xFFD8E0E8),
 )

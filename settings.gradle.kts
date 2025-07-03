@@ -26,7 +26,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Daily_Planner"
+rootProject.name = "DailyPlanner"
 include(":app")
 include(":feature:todo-list")
 include(":core:resource")

@@ -18,12 +18,12 @@ fun DailyPlannerTheme(
     val colors = when (darkTheme) {
         true -> {
             when (AppTheme.style) {
-                AppStyle.GREEN -> greenDarkPalette
+                AppStyle.BLUE -> blueDarkPalette
             }
         }
         false -> {
             when (AppTheme.style) {
-                AppStyle.GREEN -> greenLightPalette
+                AppStyle.BLUE -> blueLightPalette
             }
         }
     }

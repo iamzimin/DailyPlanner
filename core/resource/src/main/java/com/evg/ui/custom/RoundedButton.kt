@@ -1,7 +1,6 @@
 package com.evg.ui.custom
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
@@ -46,7 +45,7 @@ private fun RoundedButtonPreview() {
         RoundedButton(
             backgroundColor = AppTheme.colors.secondary,
             icon = painterResource(R.drawable.plus),
-            iconColor = AppTheme.colors.primary,
+            iconColor = AppTheme.colors.text,
             onClick = {},
         )
     }

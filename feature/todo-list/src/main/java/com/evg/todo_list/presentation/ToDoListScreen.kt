@@ -192,7 +192,7 @@ fun SharedTransitionScope.ToDoListScreen(
                 ),
             backgroundColor = AppTheme.colors.secondary,
             icon = painterResource(R.drawable.plus),
-            iconColor = AppTheme.colors.primary,
+            iconColor = AppTheme.colors.text,
             onClick = { onTaskCreationScreen() },
         )
     }
