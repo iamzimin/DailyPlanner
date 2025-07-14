@@ -47,7 +47,7 @@ fun CustomDateTimeSelection(
     onTimeSelected: (Long) -> Unit,
 ) {
     val dateFormatter = remember {
-        SimpleDateFormat("EEEE, d MMMM yyyy", Locale.getDefault())
+        SimpleDateFormat("E, d MMMM yyyy", Locale.getDefault())
     }
     val timeFormatter = remember {
         SimpleDateFormat("HH:mm", Locale.getDefault())
