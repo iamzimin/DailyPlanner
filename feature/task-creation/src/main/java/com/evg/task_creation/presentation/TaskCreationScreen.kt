@@ -27,7 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -58,10 +58,10 @@ fun SharedTransitionScope.TaskCreationScreen(
     onToDoListScreen: () -> Unit,
 ) {
     val context = LocalContext.current
-    var name by remember { mutableStateOf("") }
-    var description by remember { mutableStateOf("") }
-    var dateStartMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
-    var dateFinishMillis by remember { mutableLongStateOf(System.currentTimeMillis() + 60 * 1000L) }
+    var name by rememberSaveable { mutableStateOf("") }
+    var description by rememberSaveable { mutableStateOf("") }
+    var dateStartMillis by rememberSaveable { mutableLongStateOf(System.currentTimeMillis()) }
+    var dateFinishMillis by rememberSaveable { mutableLongStateOf(System.currentTimeMillis() + 60 * 1000L) }
 
     val titleSpace = 8.dp
     val fieldSpace = 18.dp
